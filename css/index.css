@@ -1,0 +1,1922 @@
+@charset "UTF-8";
+/*
+0-350px: small phone
+350-600px : phone
+600-900px: tablet portarit
+900-1070px: mini desktop
+1070-1200px: tablet landscape
+1200-1520px: small-desktop
+[1200-1800px]: main style 
+1800px + : big desktop
+
+$breakpoint argument choices
+-phone-small
+-phone
+-tab-port
+-mini-desktop
+-tab-land
+-small-desktop
+-big-desktop
+
+1em =16px
+*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  90% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  90% {
+    transform: translateX(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  90% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* line 2, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* set the box size in all elements inherit */
+  box-sizing: inherit;
+  direction: rtl;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* line 14, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* line 20, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (min-width: 112.5em) {
+  /* line 14, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  /* line 14, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 14, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+  html {
+    font-size: 50%;
+  }
+}
+
+/* line 42, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+body {
+  /* set the box size in all elements to border-box thanks to *{} */
+  box-sizing: border-box;
+}
+
+/* line 51, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+::selection {
+  background-color: #34bbf7;
+  color: #ffffff;
+}
+
+/* line 56, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+.desktop {
+  display: block;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 56, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+  .desktop {
+    display: none;
+  }
+}
+
+/* line 62, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 62, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_base.scss */
+  .mobile {
+    display: block;
+  }
+}
+
+@font-face {
+  font-family: 'adoveFnt22';
+  src: url(https://amitashdot.github.io/targetCall-landing/fonts/ploni-regular-aaa.otf);
+}
+
+@font-face {
+  font-family: 'adoveFnt22-bold';
+  src: url(https://amitashdot.github.io/targetCall-landing//fonts/ploni-bold-aaa.otf);
+}
+
+@font-face {
+  font-family: 'adoveFnt22-ultrabold';
+  src: url(https://amitashdot.github.io/targetCall-landing//fonts/ploni-ultrabold-aaa.otf);
+}
+
+/* line 14, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_typogrophy.scss */
+body {
+  font-family: 'adoveFnt22', cursive;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+/* line 21, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_typogrophy.scss */
+.blue-text {
+  color: #092f6a;
+}
+
+/* line 24, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_typogrophy.scss */
+.orange-text {
+  color: #4285f5;
+}
+
+/* line 1, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+.u-center-text {
+  text-align: center !important;
+}
+
+/* line 5, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+.u-margin-botton-small {
+  margin-bottom: 2rem !important;
+}
+
+/* line 9, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+.u-margin-botton-medium {
+  margin-bottom: 4rem !important;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 9, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+  .u-margin-botton-medium {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* line 17, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+.u-margin-botton-big {
+  margin-bottom: 8rem !important;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 17, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+  .u-margin-botton-big {
+    margin-bottom: 5rem !important;
+  }
+}
+
+/* line 25, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+.u-margin-top-medium {
+  margin-bottom: 6rem !important;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 25, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+  .u-margin-top-medium {
+    margin-bottom: 3rem !important;
+  }
+}
+
+/* line 33, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+.u-margin-top-big {
+  margin-bottom: 8rem !important;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 33, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+  .u-margin-top-big {
+    margin-bottom: 4rem !important;
+  }
+}
+
+/* line 41, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+.u-margin-top-huge {
+  margin-bottom: 8rem !important;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 41, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+  .u-margin-top-huge {
+    margin-bottom: 4rem !important;
+  }
+}
+
+/* line 49, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+.u-smiley-mobile {
+  display: none !important;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 49, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/base/_utilities.scss */
+  .u-smiley-mobile {
+    display: block !important;
+    margin: 3rem auto !important;
+  }
+}
+
+/* line 1, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 1, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .header {
+    justify-content: center;
+  }
+}
+
+/* line 8, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.header .logo {
+  width: 45rem;
+  object-fit: contain;
+  padding: 3rem;
+  animation: moveInRight 0.8s;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 8, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .header .logo {
+    height: 11rem;
+    padding: 0rem 7rem;
+  }
+}
+
+/* line 21, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.main-image {
+  font-family: 'adoveFnt22-bold';
+  position: relative;
+  width: 100%;
+  overflow-y: hidden;
+  font-size: 5rem;
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 21, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 21, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 21, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image {
+    font-size: 4rem;
+    object-fit: cover;
+    font-size: 4rem;
+    object-position: 50%;
+    height: 60rem;
+  }
+}
+
+/* line 44, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.main-image .whiteBackground {
+  color: #000;
+  background-color: #ffffff;
+  padding: 0 0.5rem;
+  margin: 1.2rem 0;
+  width: fit-content;
+  overflow-y: hidden;
+}
+
+/* line 52, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.main-image .mainColor-Background {
+  background-color: #092f6a;
+  padding: 0 0.5rem;
+  margin: 1.2rem 0;
+  width: fit-content;
+  overflow-y: hidden;
+}
+
+/* line 59, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.main-image .redBackground {
+  background-color: #db3832;
+  padding: 0 0.5rem;
+  margin: 1.2rem 0;
+  width: fit-content;
+  overflow-y: hidden;
+}
+
+/* line 66, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.main-image .clearBackground {
+  background-color: transparent;
+  padding: 0 0.5rem;
+  margin: 1.2rem 0;
+  width: fit-content;
+  overflow-y: hidden;
+}
+
+/* line 74, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.main-image__text {
+  overflow-y: hidden;
+  color: #ffffff;
+}
+
+/* line 77, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.main-image__text-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  top: 10%;
+  right: 25%;
+  transform: translate(50%, 0);
+  line-height: 8.5rem;
+  width: 50vw;
+  align-items: flex-end;
+  animation: fadeIn 1.5s;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 77, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image__text-container {
+    align-items: flex-start;
+    margin-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 74, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image__text {
+    line-height: 7.5rem;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 74, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image__text {
+    line-height: 6.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 74, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image__text {
+    flex-direction: column;
+    align-items: center;
+    top: 5%;
+    line-height: 5rem;
+    font-size: 3.3rem;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 74, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image__text {
+    line-height: 4rem;
+    font-size: 3.3rem;
+  }
+}
+
+/* line 119, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.main-image__bottom-text {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  bottom: 10%;
+  right: 50%;
+  transform: translate(50%, 0);
+  overflow-y: hidden;
+  width: fit-content;
+  line-height: 8.5rem;
+  animation: fadeIn 1.5s;
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 119, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image__bottom-text {
+    line-height: 7.5rem;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 119, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image__bottom-text {
+    line-height: 6.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 119, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image__bottom-text {
+    line-height: 5rem;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 119, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .main-image__bottom-text {
+    line-height: 4rem;
+    font-size: 2.3rem;
+  }
+}
+
+/* line 152, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section {
+  padding: 10rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 152, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section {
+    padding: 7rem 1rem;
+  }
+}
+
+/* line 161, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__text {
+  font-size: 7rem;
+  line-height: 9rem;
+  overflow: hidden;
+}
+
+/* line 166, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__text {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 0.5s;
+  will-change: transform opacity;
+}
+
+/* line 173, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__text.is-visible {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 161, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section__text {
+    font-size: 4rem;
+    line-height: 5rem;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 161, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section__text {
+    font-size: 3rem;
+    line-height: 4rem;
+    overflow: hidden;
+  }
+  /* line 188, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section__text#first {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 161, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section__text {
+    font-size: 2.7rem;
+  }
+}
+
+/* line 198, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__title {
+  font-family: 'adoveFnt22-ultrabold';
+  display: flex;
+  margin: 2rem auto 0rem;
+  width: fit-content;
+  transition: all 0.2s;
+}
+
+/* line 205, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__title:hover {
+  transform: scale(1.03);
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 198, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section__title {
+    margin: 2rem auto 0;
+  }
+}
+
+/* line 212, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__title#first-location-title {
+  margin: 2rem auto -9rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 212, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section__title#first-location-title {
+    margin: 2rem auto -4rem;
+  }
+}
+
+/* line 218, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__title {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 0.5s;
+  will-change: transform opacity;
+}
+
+/* line 225, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__title.is-visible {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+/* line 230, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__title h2 {
+  font-size: 14rem;
+  font-weight: 900;
+  margin: 0 1rem;
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 230, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section__title h2 {
+    font-size: 8.2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 230, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section__title h2 {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 230, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .location-section__title h2 {
+    font-size: 4.1rem;
+  }
+}
+
+/* line 246, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__title h2.color-red {
+  color: #db3832;
+}
+
+/* line 249, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.location-section__title h2.color-blue {
+  color: #092f6a;
+}
+
+/* line 256, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.contact-us-section {
+  font-family: 'adoveFnt22-bold';
+  padding: 6rem 0 6rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 256, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .contact-us-section {
+    padding: 8rem 0 0;
+  }
+  /* line 262, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .contact-us-section#grey {
+    padding: 8rem 0;
+  }
+}
+
+/* line 267, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.contact-us-section p {
+  font-size: 6rem;
+  margin-bottom: 4rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 267, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .contact-us-section p {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 267, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .contact-us-section p {
+    font-size: 3rem;
+  }
+}
+
+/* line 279, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.contact-us-section-title {
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* line 283, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.contact-us-section-title-head {
+  font-size: 7rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 95em) {
+  /* line 283, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .contact-us-section-title-head {
+    font-size: 5.8rem;
+    line-height: 7rem;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  /* line 283, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .contact-us-section-title-head {
+    font-size: 5rem;
+    line-height: 6rem;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 283, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .contact-us-section-title-head {
+    font-size: 3.5rem;
+    line-height: 5rem;
+    padding: 0 3rem;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 283, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .contact-us-section-title-head {
+    font-size: 3rem;
+  }
+}
+
+/* line 309, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.contact-us-section#grey {
+  background-color: #d8dde1;
+}
+
+/* line 313, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  margin: auto;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 313, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form {
+    width: 85vw;
+  }
+}
+
+/* line 322, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-input {
+  font-family: 'adoveFnt22';
+  height: 9rem;
+  border: none;
+  border-radius: 10rem;
+  margin: 1.5rem 0;
+  padding: 0 2.5rem;
+  font-size: 3.5rem;
+  color: #092f6a;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 322, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-input {
+    height: 7rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 322, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-input {
+    margin: 0.8rem;
+  }
+}
+
+/* line 327, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-input:focus {
+  outline: 0;
+}
+
+/* line 331, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-input:hover::placeholder {
+  color: #092f6a;
+}
+
+/* line 335, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-submit {
+  font-family: 'adoveFnt22-bold';
+  position: relative;
+  height: 10rem;
+  border: none;
+  border-radius: 10rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
+  font-size: 5rem;
+  color: #ffffff;
+  background-color: #092f6a;
+  width: 50%;
+  align-self: center;
+  margin-top: 9rem;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 335, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-submit {
+    font-size: 3rem;
+    width: 50%;
+    height: 7rem;
+    margin-top: 5rem;
+  }
+}
+
+/* line 66, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit:focus {
+  outline: 0;
+}
+
+/* line 69, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+  transition: 0.5s;
+}
+
+/* line 83, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100px) skewX(-15deg);
+  transition: 0.5s;
+}
+
+/* line 97, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit:hover {
+  background: #092f6a;
+  cursor: pointer;
+}
+
+/* line 100, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit:hover:before {
+  transform: translateX(350px) skewX(-15deg);
+  opacity: 0.6;
+}
+
+/* line 104, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit:hover:after {
+  transform: translateX(350px) skewX(-15deg);
+  opacity: 1;
+}
+
+/* line 338, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-submit:hover {
+  transform: translate(0.6rem, -0.8rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* line 341, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-submit-light {
+  font-family: 'adoveFnt22-bold';
+  position: relative;
+  height: 10rem;
+  border: none;
+  border-radius: 10rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
+  font-size: 5rem;
+  color: #ffffff;
+  background-color: #092f6a;
+  width: 50%;
+  align-self: center;
+  margin-top: 9rem;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 341, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-submit-light {
+    font-size: 3rem;
+    width: 50%;
+    height: 7rem;
+    margin-top: 5rem;
+  }
+}
+
+/* line 66, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit-light:focus {
+  outline: 0;
+}
+
+/* line 69, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit-light:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+  transition: 0.5s;
+}
+
+/* line 83, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit-light:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100px) skewX(-15deg);
+  transition: 0.5s;
+}
+
+/* line 97, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit-light:hover {
+  background: #092f6a;
+  cursor: pointer;
+}
+
+/* line 100, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit-light:hover:before {
+  transform: translateX(350px) skewX(-15deg);
+  opacity: 0.6;
+}
+
+/* line 104, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-submit-light:hover:after {
+  transform: translateX(350px) skewX(-15deg);
+  opacity: 1;
+}
+
+/* line 344, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-submit-light:hover {
+  transform: translate(0.6rem, -0.8rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* line 350, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom {
+  display: flex;
+}
+
+/* line 352, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom .left {
+  width: 70%;
+  text-align: center;
+  margin-left: 0rem;
+  padding-top: 7rem;
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 352, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-bottom .left {
+    margin-left: 5rem;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 352, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-bottom .left {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 2rem;
+  }
+}
+
+/* line 366, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom .right {
+  width: 30%;
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 366, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-bottom .right {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 366, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-bottom .right {
+    width: 0%;
+  }
+}
+
+/* line 375, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom .right .smiley.inline-photo {
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  will-change: transform;
+}
+
+/* line 382, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom .right .smiley.inline-photo.is-visible {
+  transform: translateX(0%);
+}
+
+/* line 387, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom-input {
+  font-family: 'adoveFnt22';
+  height: 9rem;
+  border: none;
+  border-radius: 10rem;
+  margin: 1.5rem 0;
+  padding: 0 2.5rem;
+  font-size: 3.5rem;
+  color: #4285f5;
+  background-color: #eff6fe;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 387, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-bottom-input {
+    height: 7rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 387, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-bottom-input {
+    margin: 0.8rem;
+  }
+}
+
+/* line 392, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom-input:focus {
+  outline: 0;
+}
+
+/* line 396, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom-input::placeholder {
+  color: #052558;
+}
+
+/* line 400, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom-input:hover::placeholder {
+  color: #4285f5;
+}
+
+/* line 404, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom-submit {
+  font-family: 'adoveFnt22-bold';
+  position: relative;
+  height: 10rem;
+  border: none;
+  border-radius: 10rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
+  font-size: 5rem;
+  color: #ffffff;
+  background-color: #4285f5;
+  width: 50%;
+  align-self: center;
+  margin-top: 9rem;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 404, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .form-bottom-submit {
+    font-size: 3rem;
+    width: 50%;
+    height: 7rem;
+    margin-top: 5rem;
+  }
+}
+
+/* line 66, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-bottom-submit:focus {
+  outline: 0;
+}
+
+/* line 69, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-bottom-submit:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+  transition: 0.5s;
+}
+
+/* line 83, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-bottom-submit:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100px) skewX(-15deg);
+  transition: 0.5s;
+}
+
+/* line 97, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-bottom-submit:hover {
+  background: #2d6bd2;
+  cursor: pointer;
+}
+
+/* line 100, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-bottom-submit:hover:before {
+  transform: translateX(350px) skewX(-15deg);
+  opacity: 0.6;
+}
+
+/* line 104, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/abstract/_mixins.scss */
+.form-bottom-submit:hover:after {
+  transform: translateX(350px) skewX(-15deg);
+  opacity: 1;
+}
+
+/* line 407, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.form-bottom-submit:hover {
+  transform: translate(0.6rem, -0.8rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* line 414, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion {
+  padding: 10rem 7rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 414, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .about-setion {
+    padding: 10rem 4rem;
+  }
+}
+
+/* line 420, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion__info {
+  margin: auto;
+  font-size: 4rem;
+  min-width: 90rem;
+  max-width: 120rem;
+}
+
+/* line 425, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion__info {
+  transform: translateY(40%);
+  opacity: 0;
+  transition: all 0.5s;
+  will-change: transform opacity;
+}
+
+/* line 432, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion__info.is-visible {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 420, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .about-setion__info {
+    min-width: 0;
+    max-width: 95vw;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 420, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .about-setion__info {
+    text-align: center;
+    font-size: 2.7rem;
+    min-width: 0;
+    max-width: 95vw;
+  }
+}
+
+/* line 449, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion__info:first-child {
+  margin-bottom: 7rem;
+}
+
+/* line 453, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion__info:hover .about-setion__info-title {
+  background-position: 0 -100%;
+}
+
+/* line 457, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion__info-title {
+  font-family: 'adoveFnt22-bold';
+  font-size: 4rem;
+  position: relative;
+  display: inline-block;
+  color: #052558;
+  background: linear-gradient(to right, #052558, #052558 50%, black 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: -100%;
+  overflow: hidden;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+}
+
+/* line 479, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion__info-text {
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 479, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .about-setion__info-text {
+    line-height: 4rem;
+    overflow: hidden;
+  }
+}
+
+/* line 489, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion__info-text.newline::before {
+  content: '\A';
+  white-space: pre-line;
+}
+
+/* line 494, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.about-setion__info-text.bold {
+  font-family: 'adoveFnt22-bold';
+}
+
+/* line 501, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 13vw 12rem 7rem;
+  background-color: #000;
+  color: #ffffff;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 501, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section {
+    padding: 10rem 10vw 12rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 501, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section {
+    background-color: #d8dde1;
+    color: #000;
+    padding: 8rem 1rem;
+  }
+}
+
+/* line 519, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-title {
+  font-family: 'adoveFnt22-bold';
+  color: #4285f5;
+  font-size: 9rem;
+  margin-bottom: 4rem;
+  align-self: end;
+}
+
+/* line 526, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-title {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.5s;
+  will-change: transform opacity;
+}
+
+/* line 533, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-title.is-visible {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 95em) {
+  /* line 519, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-title {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  /* line 519, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-title {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 519, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-title {
+    font-size: 7rem;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 519, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-title {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 519, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-title {
+    font-size: 3rem;
+    align-self: center;
+  }
+}
+
+/* line 557, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-title-span {
+  opacity: 0;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+  will-change: transform opacity;
+}
+
+/* line 564, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-title-span.is-visible {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+/* line 571, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-list {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 571, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    text-align: center;
+    align-self: center;
+  }
+}
+
+/* line 584, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-list__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 1rem 0;
+  float: left;
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+@media only screen and (max-width: 95em) {
+  /* line 584, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  /* line 584, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 584, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 584, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 584, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item {
+    margin: 0;
+    flex-direction: column-reverse;
+    font-size: 2.6rem;
+  }
+  /* line 613, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item:last-child .pros-section-list__item-smile-outer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 618, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item-desktop {
+    flex-direction: column;
+    display: block;
+  }
+}
+
+/* line 625, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-list__item-newLine {
+  padding-right: 1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 628, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item-newLine::before {
+    content: '\A';
+    white-space: pre-line;
+  }
+}
+
+/* line 635, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-list__item:hover .pros-section-list__item-smile-inner {
+  color: #052558;
+}
+
+/* line 638, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-list__item:hover .pros-section-list__item-smile-outer {
+  transform: rotate(-25deg);
+}
+
+/* line 642, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-list__item-smile-outer {
+  position: relative;
+  width: 6rem;
+  height: 3rem;
+  overflow: hidden;
+  background-color: black;
+  margin-left: 5rem;
+  transition: all 0.2s;
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 642, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item-smile-outer {
+    width: 4rem;
+    height: 2rem;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 642, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item-smile-outer {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 642, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item-smile-outer {
+    width: 4rem;
+    height: 2rem;
+    margin: 3rem 0;
+    background-color: #d8dde1;
+    color: #ffffff;
+  }
+}
+
+/* line 667, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.pros-section-list__item-smile-inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 10px solid;
+  transition: all 0.2s;
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 667, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item-smile-inner {
+    width: 4rem;
+    height: 4rem;
+    border: 6px solid;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 667, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .pros-section-list__item-smile-inner {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+/* line 691, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+.footer {
+  width: 50%;
+  margin-top: -10px;
+  margin-right: auto;
+  margin-bottom: 6rem;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 691, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .footer {
+    width: 100vw;
+    margin-top: -2rem;
+    margin-bottom: 0rem;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 704, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .footer-logo {
+    width: 56%;
+    object-fit: contain;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 711, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_homepage.scss */
+  .footer .smiley {
+    width: 40%;
+    object-fit: contain;
+  }
+}
+
+/* line 1, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.blue-background {
+  background-color: #4285f5;
+  padding: 0 1rem;
+}
+
+/* line 5, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.black-background {
+  background-color: #000;
+  padding: 0 1rem;
+}
+
+/* line 10, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.receive-section {
+  display: flex;
+  justify-content: center;
+  background-color: #d8dde1;
+  padding: 16rem 3rem;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 10, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section {
+    flex-direction: column;
+    padding: 5rem 3rem;
+  }
+}
+
+/* line 20, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.receive-section__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  max-width: 50%;
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 20, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right {
+    align-items: center;
+    max-width: 100%;
+    margin-left: 0rem;
+  }
+}
+
+/* line 34, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.receive-section__right__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 4rem;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 34, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__top {
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 0;
+    margin-right: -6rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 34, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__top {
+    width: 70%;
+    justify-content: center;
+    margin-right: -3rem;
+  }
+}
+
+/* line 52, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.receive-section__right__top-image {
+  width: 25%;
+  margin-left: 3rem;
+}
+
+@media only screen and (max-width: 66.875em) {
+  /* line 52, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__top-image {
+    width: 15%;
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 52, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__top-image {
+    width: 15%;
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 52, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__top-image {
+    width: 15%;
+    justify-content: end;
+    align-items: flex-end;
+    margin-right: -3rem;
+  }
+}
+
+/* line 75, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.receive-section__right__top-text {
+  color: #ffffff;
+  font-family: 'adoveFnt22-bold';
+  font-size: 4.5vw;
+  line-height: 4.3vw;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 75, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__top-text {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 75, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__top-text {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 75, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__top-text {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+/* line 111, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.receive-section__right__bottom-text {
+  font-family: 'adoveFnt22-bold';
+  font-size: 4.5vw;
+  line-height: 4.3vw;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 111, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__bottom-text {
+    font-size: 4rem;
+    line-height: 5rem;
+    margin: 2rem 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 111, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__right__bottom-text {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin: 2rem 0 2rem;
+  }
+}
+
+/* line 134, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.receive-section__left {
+  display: flex;
+  align-items: flex-end;
+  font-family: 'adoveFnt22-bold';
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 134, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__left {
+    align-self: center;
+  }
+}
+
+/* line 143, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.receive-section__left-title {
+  font-size: 4.5vw;
+  line-height: 4.3vw;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 143, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__left-title {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 143, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .receive-section__left-title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+/* line 160, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.visit-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 3rem;
+  font-family: 'adoveFnt22-bold';
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 160, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section {
+    padding: 5rem 1rem;
+  }
+}
+
+/* line 183, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.visit-section-title {
+  font-size: 4.5vw;
+  margin-bottom: 4rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 183, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section-title {
+    font-size: 3.5rem;
+    margin-bottom: 0rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 183, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section-title {
+    font-size: 2.8rem;
+  }
+}
+
+/* line 205, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.visit-section-button {
+  font-family: 'adoveFnt22-bold';
+  position: relative;
+  height: 10rem;
+  border: none;
+  border-radius: 10rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
+  font-size: 5rem;
+  color: #ffffff;
+  background-color: #4285f5;
+  width: 50%;
+  align-self: center;
+  margin-top: 9rem;
+  transition: all 0.5s;
+  font-size: 4.5vw;
+  padding: 0rem 2rem;
+  overflow: hidden;
+  height: auto;
+  width: 43%;
+  margin-top: 0;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 205, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section-button {
+    font-size: 3rem;
+    width: 50%;
+    height: 7rem;
+    margin-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 205, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section-button {
+    height: auto;
+    font-size: 3rem;
+    width: 60%;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 205, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section-button {
+    font-size: 2.8rem;
+  }
+}
+
+/* line 229, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.visit-section-button:link {
+  text-decoration: none;
+}
+
+/* line 233, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.visit-section-button:visited, .visit-section-button:hover, .visit-section-button:active {
+  text-decoration: none;
+}
+
+/* line 238, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.visit-section-button:hover {
+  transform: translate(0.6rem, -0.8rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* line 242, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.visit-section-text {
+  font-family: 'adoveFnt22';
+  font-size: 7rem;
+  margin-bottom: 13rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* line 242, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section-text {
+    font-size: 4rem;
+    margin-bottom: 8rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  /* line 242, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section-text {
+    font-size: 3rem;
+  }
+}
+
+/* line 255, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.visit-section__images {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+@media only screen and (max-width: 95em) {
+  /* line 255, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section__images {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  /* line 255, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section__images {
+    width: 45vw;
+  }
+}
+
+@media only screen and (max-width: 58.75em) {
+  /* line 255, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+  .visit-section__images {
+    width: 50vw;
+  }
+}
+
+/* line 274, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
+.visit-section__images-image {
+  width: 100%;
+  align-self: center;
+}
+
+/*# sourceMappingURL=index.css.map */
