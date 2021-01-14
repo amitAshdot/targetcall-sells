@@ -21,12 +21,12 @@
     <link
       rel="preload"
       as="image"
-      href="https://amitashdot.github.io/targetCall-landing/images/main-image-desktop.jpg"
+      href="https://amitashdot.github.io/targetCall-sells/images/main-image-desktop.jpg"
     />
     <link
       rel="preload"
       as="image"
-      href="https://amitashdot.github.io/targetCall-landing/images/main-image-mobile.jpg"
+      href="https://amitashdot.github.io/targetCall-sells/images/main-image-mobile.jpg"
     />
   </head>
 
@@ -53,10 +53,7 @@
           </h2>
         </div>
         <picture>
-          <source
-            media="(max-width: 37.5em)"
-            srcset="images/main-image-mobile.jpg"
-          />
+          <source media="(max-width: 37.5em)" srcset="images/main-image.jpg" />
           <source
             media="(min-width: 37.5em)"
             srcset="images/main-image-desktop.jpg"
@@ -348,12 +345,12 @@
     <script>
       // Helper function from: http://stackoverflow.com/a/7557433/274826
       const isElementInViewport = el => {
-        const pixFromElementTop = 1
+        const pixFromElementTop = 1;
         // special bonus for those using jQuery
-        if (typeof jQuery === 'function' && el instanceof jQuery) {
-          el = el[0]
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+          el = el[0];
         }
-        let rect = el.getBoundingClientRect()
+        let rect = el.getBoundingClientRect();
         return (
           (rect.top + pixFromElementTop <= 0 && rect.bottom >= 0) ||
           (rect.bottom + pixFromElementTop >=
@@ -363,49 +360,49 @@
           (rect.top + pixFromElementTop >= 0 &&
             rect.bottom + pixFromElementTop <=
               (window.innerHeight || document.documentElement.clientHeight))
-        )
-      }
+        );
+      };
       // Detect request animation frame
       let scroll =
         window.requestAnimationFrame ||
         // IE Fallback
-        function (callback) {
-          window.setTimeout(callback, 1000 / 60)
-        }
-      let elementsToShow = document.querySelectorAll('.show-on-scroll')
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      let elementsToShow = document.querySelectorAll(".show-on-scroll");
 
       const loop = () => {
-        Array.prototype.forEach.call(elementsToShow, function (element) {
+        Array.prototype.forEach.call(elementsToShow, function(element) {
           if (isElementInViewport(element)) {
-            element.classList.add('is-visible')
+            element.classList.add("is-visible");
           } else {
-            element.classList.remove('is-visible')
+            element.classList.remove("is-visible");
           }
-        })
+        });
 
-        scroll(loop)
-      }
+        scroll(loop);
+      };
 
       // Call the loop for the first time
-      loop()
+      loop();
 
       //get url params
-      const queryString = window.location.search
-      const urlParams = new URLSearchParams(queryString)
-      const locationNum = urlParams.get('locationNum')
-      const site = urlParams.get('site')
-      const from = urlParams.get('from')
-      let inputLocation = document.getElementsByClassName('systemfield12')
-      let inputSite = document.getElementsByClassName('systemfield52')
-      let inputFrom = document.getElementsByClassName('originatingleadcode')
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const locationNum = urlParams.get("locationNum");
+      const site = urlParams.get("site");
+      const from = urlParams.get("from");
+      let inputLocation = document.getElementsByClassName("systemfield12");
+      let inputSite = document.getElementsByClassName("systemfield52");
+      let inputFrom = document.getElementsByClassName("originatingleadcode");
 
-      let locationArray = [...inputLocation]
-      let siteArray = [...inputSite]
-      let fromArray = [...inputFrom]
+      let locationArray = [...inputLocation];
+      let siteArray = [...inputSite];
+      let fromArray = [...inputFrom];
 
-      locationArray.map(item => (item.value = locationNum))
-      siteArray.map(item => (item.value = site))
-      fromArray.map(item => (item.value = from))
+      locationArray.map(item => (item.value = locationNum));
+      siteArray.map(item => (item.value = site));
+      fromArray.map(item => (item.value = from));
     </script>
   </body>
 </html>
