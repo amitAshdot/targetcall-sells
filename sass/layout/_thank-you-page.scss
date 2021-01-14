@@ -74,8 +74,8 @@
       }
       &-text {
         color: $color-white;
-        font-family: 'adoveFnt22-bold';
-        font-size: 4.5vw;
+        font-family: "adoveFnt22-bold";
+        font-size: 4vw;
         line-height: 4.3vw;
         overflow: hidden;
 
@@ -109,8 +109,8 @@
 
     &__bottom {
       &-text {
-        font-family: 'adoveFnt22-bold';
-        font-size: 4.5vw;
+        font-family: "adoveFnt22-bold";
+        font-size: 4vw;
         line-height: 4.3vw;
 
         color: $color-white;
@@ -134,7 +134,7 @@
   &__left {
     display: flex;
     align-items: flex-end;
-    font-family: 'adoveFnt22-bold';
+    font-family: "adoveFnt22-bold";
 
     @include respond(tab-port) {
       align-self: center;
@@ -162,7 +162,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10rem 3rem;
-  font-family: 'adoveFnt22-bold';
+  font-family: "adoveFnt22-bold";
 
   @include respond(small-desktop) {
   }
@@ -240,7 +240,7 @@
     }
   }
   &-text {
-    font-family: 'adoveFnt22';
+    font-family: "adoveFnt22";
     font-size: 7rem;
     margin-bottom: 13rem;
 

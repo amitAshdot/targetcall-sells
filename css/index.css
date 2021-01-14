@@ -1742,8 +1742,8 @@ body {
 /* line 75, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
 .receive-section__right__top-text {
   color: #ffffff;
-  font-family: 'adoveFnt22-bold';
-  font-size: 4.5vw;
+  font-family: "adoveFnt22-bold";
+  font-size: 4vw;
   line-height: 4.3vw;
   overflow: hidden;
 }
@@ -1773,8 +1773,8 @@ body {
 
 /* line 111, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
 .receive-section__right__bottom-text {
-  font-family: 'adoveFnt22-bold';
-  font-size: 4.5vw;
+  font-family: "adoveFnt22-bold";
+  font-size: 4vw;
   line-height: 4.3vw;
   color: #ffffff;
   text-align: center;
@@ -1803,7 +1803,7 @@ body {
 .receive-section__left {
   display: flex;
   align-items: flex-end;
-  font-family: 'adoveFnt22-bold';
+  font-family: "adoveFnt22-bold";
 }
 
 @media only screen and (max-width: 58.75em) {
@@ -1842,7 +1842,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 10rem 3rem;
-  font-family: 'adoveFnt22-bold';
+  font-family: "adoveFnt22-bold";
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -1947,7 +1947,7 @@ body {
 
 /* line 242, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/sells/sass/layout/_thank-you-page.scss */
 .visit-section-text {
-  font-family: 'adoveFnt22';
+  font-family: "adoveFnt22";
   font-size: 7rem;
   margin-bottom: 13rem;
 }
