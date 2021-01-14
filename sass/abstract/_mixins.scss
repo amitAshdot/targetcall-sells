@@ -1,6 +1,6 @@
 @mixin clearFix {
   &::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -14,7 +14,7 @@
 }
 
 @mixin inputBasic {
-  font-family: 'adoveFnt22';
+  font-family: "adoveFnt22";
   height: 9rem;
   border: none;
   border-radius: 10rem;
@@ -33,7 +33,7 @@
   }
 }
 @mixin submitBasic($color) {
-  font-family: 'adoveFnt22-bold';
+  font-family: "adoveFnt22-bold";
   position: relative;
   height: 10rem;
   border: none;
@@ -67,7 +67,7 @@
     outline: 0;
   }
   &:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     background: rgba(255, 255, 255, 0.5);
@@ -81,7 +81,7 @@
     transition: 0.5s;
   }
   &:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     background: rgba(255, 255, 255, 0.2);
@@ -105,6 +105,25 @@
       transform: translateX(350px) skewX(-15deg);
       opacity: 1;
     }
+  }
+}
+
+@mixin mainTextBackground() {
+  padding: 0 0.5rem;
+  margin: 1.2rem 0;
+  width: fit-content;
+  overflow-y: hidden;
+  @include respond(tab-port) {
+    line-height: 5.5rem;
+    font-size: 4.5rem;
+  }
+  @include respond(phone-small) {
+    line-height: 4rem;
+    font-size: 4rem;
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 // --------- BUILT BY Amit Ashdot ---------
